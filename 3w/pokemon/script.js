@@ -1,0 +1,23 @@
+var tmp = window.localStorage.getItem("pokemon");
+var pokemon = JSON.parse(tmp ? tmp : '');
+console.log(pokemon);
+var main = document.querySelector("main");
+var subdetail = document.createElement("div");
+subdetail.classList.add("subdetail");
+var img = document.createElement("img");
+img.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/".concat(pokemon.id, ".png");
+img.alt = pokemon.name;
+subdetail.appendChild(img);
+var table = document.createElement("table");
+var tbody = document.createElement("tbody");
+table.appendChild(tbody);
+Object.keys(pokemon).forEach(function (key) {
+    var tr = document.createElement("tr");
+    var td = document.createElement("td");
+    td.innerText = key;
+    var tdValue = document.createElement("td");
+    tdValue.innerText = pokemon[key];
+    tr.append(td, tdValue);
+    tbody.appendChild(tr);
+});
+main && main.append(subdetail, table);
