@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/skkuding1/static/css/main.76d2030b.css",
+    "main.js": "/skkuding1/static/js/main.071d125a.js",
+    "static/js/453.78b87f59.chunk.js": "/skkuding1/static/js/453.78b87f59.chunk.js",
+    "index.html": "/skkuding1/index.html",
+    "main.76d2030b.css.map": "/skkuding1/static/css/main.76d2030b.css.map",
+    "main.071d125a.js.map": "/skkuding1/static/js/main.071d125a.js.map",
+    "453.78b87f59.chunk.js.map": "/skkuding1/static/js/453.78b87f59.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76d2030b.css",
+    "static/js/main.071d125a.js"
+  ]
+}
