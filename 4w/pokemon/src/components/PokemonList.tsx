@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { PokemonListData } from "./PokemonListData"
+
 
 interface Pokemon {
   name: string;
@@ -18,25 +20,20 @@ interface Pokemon {
 
 
 interface Props {
-  pokemon: Pokemon;
   index: number;
-  setSelectedPokemon: (pokemon: any) => void;
 }
-export const PokemonList = ({pokemon, index, setSelectedPokemon} : Props) => {
 
+const data = Array.from({ length: 50 }, (_, index) => index);
+
+export const PokemonList = () => {
   return (
-    <Link to={`/detail/${index + 1}`} className="detail">
-      <img
-        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index+1}.png`}
-        alt={pokemon.name}
-      />
-    <div className="description">
-      <h2>{pokemon.name}</h2>
-      <p>Height: {pokemon.height}</p>
-      <p>Weight: {pokemon.weight}</p>
-      <p>Types: {pokemon.types.join(", ")}</p>
+  <div className="table">
+    <div className="grid-container" id="gridTable">{data.map((index, key) => (
+        <PokemonListData key={key} index={index} />
+      ))}
+      
     </div>
-  </Link>
+  </div>
   )
 }
 

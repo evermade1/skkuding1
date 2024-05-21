@@ -11,15 +11,12 @@ function App() {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <nav>
-          <h1><a href="./" className="navbar">Pokemon List</a></h1>
+          <h1><a href="/" className="navbar">Pokemon List</a></h1>
           <hr />
         </nav>
         <main>
           <Routes>
-            <Route path='/' element={<div className="table">
-              <div className="grid-container" id="gridTable">
-                {data.map((pokemon, index) => <PokemonList pokemon={pokemon} index={index} setSelectedPokemon={setSelectedPokemon} />)}
-              </div></div>} />
+            <Route path='/' element={<PokemonList />} />
             <Route path='/detail/:id' element={<PokemonDetail />} />
           </Routes>
         </main>
