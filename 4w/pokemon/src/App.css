@@ -1,10 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   background-color: #2E2E2E;
 }
 
-nav {
+/* nav {
   color: #FACC2E
-}
+} */
 
 h1 {
   margin-left: 0%;
