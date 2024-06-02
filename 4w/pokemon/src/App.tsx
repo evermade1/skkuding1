@@ -10,8 +10,8 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
-        <nav className="text-[#FACC2E]">
-          <h1><a href="/" className="navbar">Pokemon List</a></h1>
+        <nav>
+          <h1><a href={process.env.PUBLIC_URL} className="text-yellow-400 text-3xl font-semibold m-15">Pokemon List</a></h1>
           <hr />
         </nav>
         <main>
